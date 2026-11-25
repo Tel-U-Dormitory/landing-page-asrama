@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f8f7f4;
+  color: #202329;
+  font-family: system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+a { color: #9b263b; }
+a:focus-visible, button:focus-visible { outline: 3px solid #254fa0; outline-offset: 4px; }

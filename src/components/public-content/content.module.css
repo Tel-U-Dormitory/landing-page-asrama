@@ -1,0 +1,37 @@
+.page {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding: clamp(1.25rem, 5vw, 4rem);
+  overflow-wrap: anywhere;
+}
+
+.page h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-block: 1rem 1.5rem;
+}
+
+.nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+
+.grid, .list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.grid { grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr)); }
+
+.card, .notice {
+  background: white;
+  border: 1px solid #e5dfd8;
+  border-radius: .75rem;
+  padding: 1.25rem;
+}
+
+.card h2 { margin-block: .25rem; font-size: 1.25rem; }
+.date { color: #545861; }
+.body { max-width: 70ch; white-space: pre-wrap; }
+.media { margin: 0 0 1rem; }
+.media img { display: block; max-width: 100%; height: auto; border-radius: .5rem; }
