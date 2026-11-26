@@ -4,10 +4,23 @@ P1-02 Landing Page R&D Senior Resident Telkom University. Repository bersama unt
 
 ## Menjalankan proyek
 
-Gunakan Node.js 24 dan Bun. Bun mengelola dependensi, lockfile, script, dan pengujian.
+Gunakan **Bun** sebagai JavaScript runtime sekaligus package manager. Bun digunakan untuk menjalankan aplikasi, mengelola dependensi, lockfile, script, pengujian, dan proses build.
+
+Pastikan Bun sudah terinstal sebelum menjalankan proyek.
+
+```sh
+bun --version
+```
+
+Install seluruh dependensi menggunakan lockfile:
 
 ```sh
 bun install --frozen-lockfile
+```
+
+Jalankan development server:
+
+```sh
 bun run dev
 ```
 
@@ -16,6 +29,8 @@ Buka `http://localhost:3000/events`, `/berita`, atau `/pengumuman`. Homepage dan
 Salin `.env.example` ke `.env.local` bila ingin mengaktifkan `PUBLIC_CONTENT_FIXTURES=1`. Mulai ulang dev server setelah mengubah variabel. Seluruh konten contoh berlabel simulasi dan fixture konten hanya aktif di development. Halaman menggunakan keadaan kosong sampai sumber data disambungkan.
 
 ## Pemeriksaan
+
+Seluruh proses pemeriksaan dan build menggunakan Bun.
 
 ```sh
 bun run lint

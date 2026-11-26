@@ -1,12 +1,13 @@
+
 {
   "name": "landing-page-asrama",
   "private": true,
   "scripts": {
-    "dev": "node node_modules/next/dist/bin/next dev",
-    "build": "node node_modules/next/dist/bin/next build",
-    "start": "node node_modules/next/dist/bin/next start",
-    "lint": "node node_modules/eslint/bin/eslint.js .",
-    "typecheck": "node node_modules/next/dist/bin/next typegen && node node_modules/typescript/bin/tsc --noEmit",
+    "dev": "bun ./node_modules/next/dist/bin/next dev",
+    "build": "bun ./node_modules/next/dist/bin/next build",
+    "start": "bun ./node_modules/next/dist/bin/next start",
+    "lint": "bun ./node_modules/eslint/bin/eslint.js .",
+    "typecheck": "bun ./node_modules/next/dist/bin/next typegen && bun ./node_modules/typescript/bin/tsc --noEmit",
     "test": "bun test"
   },
   "dependencies": {
