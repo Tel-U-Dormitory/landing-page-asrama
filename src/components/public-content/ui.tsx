@@ -1,22 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import type { PublicImage } from "@/features/news/model";
+import { ShareLink } from "@/components/site/share-link";
 import styles from "./content.module.css";
 
-const routes = [
-  ["/events", "Kegiatan"],
-  ["/berita", "Berita dan dokumentasi"],
-  ["/pengumuman", "Pengumuman"],
-] as const;
+type ContentPageProps = { title: string; children: ReactNode; shareable?: boolean };
 
-export function ContentPage({ title, children }: { title: string; children: ReactNode }) {
+export function ContentPage({ title, children, shareable = false }: ContentPageProps) {
   return (
-    <main className={styles.page}>
-      <nav className={styles.nav} aria-label="Konten publik">
-        {routes.map(([href, label]) => <Link key={href} href={href} prefetch={false}>{label}</Link>)}
-      </nav>
+    <main id="konten" className={styles.page}>
       <h1>{title}</h1>
+      {shareable && <ShareLink />}
       {children}
     </main>
   );
@@ -46,5 +40,10 @@ export function ListFeedback({ message }: { message: string }) {
 }
 
 export function ContentLoading() {
-  return <main className={styles.page}><p role="status">Memuat konten…</p></main>;
+  return <main id="konten" className={styles.page}><p role="status">Memuat konten…</p></main>;
+}
+
+// Kotak kosong pengganti gambar. Murni CSS, tanpa file. Diganti gambar asli saat admin mengunggah.
+export function ImageSlot() {
+  return <div className={styles.slot} aria-hidden="true" />;
 }

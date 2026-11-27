@@ -11,7 +11,7 @@ export default async function NewsDetail({ params }: { params: Promise<{ slug: s
   if (!article) notFound();
 
   return (
-    <ContentPage title={article.title}>
+    <ContentPage title={article.title} shareable>
       <article>
         <ContentDate value={article.publishedAt} />
         <p className={styles.body}>{article.body}</p>
