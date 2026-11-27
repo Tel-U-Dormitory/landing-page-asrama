@@ -11,7 +11,7 @@ export default async function EventDetail({ params }: { params: Promise<{ slug: 
   if (!event) notFound();
 
   return (
-    <ContentPage title={event.title}>
+    <ContentPage title={event.title} shareable>
       <ContentDate value={event.startsAt} />
       {event.description && <p className={styles.body}>{event.description}</p>}
     </ContentPage>
